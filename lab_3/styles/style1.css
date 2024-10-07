@@ -9,7 +9,6 @@ header, section, article, nav, aside, footer, div {
     margin: 10px;
 }
 #PageContent {
-    
     border-style: dashed;
     border-color: rgb(6, 6, 6);
     overflow: hidden;
@@ -38,7 +37,7 @@ header, section, article, nav, aside, footer, div {
     background-color: #f9f9f9;
 }
 #SiteLogo {
-    width: 20%;
+    width: 15%;
     float: left;
     margin: 15px;
     border: 1px solid #ccc;
@@ -48,7 +47,7 @@ header, section, article, nav, aside, footer, div {
     float: right;
     display: inline-block;
     width: 70%;
-    margin: 15px;
+    margin: 55px;
     padding: 55px;
     background-color: white;
     border: 1px solid #ccc;
@@ -59,35 +58,34 @@ header, section, article, nav, aside, footer, div {
     clear: both;
 }
 #main-image {
-    width: 70%;
+    width: 68%;
     float: left;
 }
 #ImageDetails {
     float: left;
-    width: 48%;
+    width: 66%;
     padding: 10px;
-    margin: 30px 20px;
+    margin: 30px 14px;
     border: 1px dashed red;
 }
 #PhotoGrid {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 15%;
+    height: 440px;
     float: right;
-    padding: 0;
-    margin: 5px;
+    margin: 5px 100px;
 }
 .photo {
-    width: 13%;
+    width: 26%;
     margin: 5px;
     box-sizing: border-box;
 }
 .GalleryPost {
     clear: right;
     float: right;
-    width: 12%;
-    margin: 5px;
+    width: 48%;
+    margin: 2px 100px;
 }
 .GalleryPost div {
     padding: 10px;
@@ -96,6 +94,10 @@ header, section, article, nav, aside, footer, div {
     font-size: xx-small;
     margin: 5px;
 }
+#RightSide {
+    border: none;
+    margin: 2px;
+}
 #PageFooter {
     clear: both;
     text-align: center;
@@ -103,4 +105,10 @@ header, section, article, nav, aside, footer, div {
     background-color: #f0f0f0;
     border-top: 1px solid #ccc;
     margin-top: 20px;
+}
+.images {
+ display: -webkit-box;
+ display: flex;
+ flex-direction: row;
+ border: none;
 }
