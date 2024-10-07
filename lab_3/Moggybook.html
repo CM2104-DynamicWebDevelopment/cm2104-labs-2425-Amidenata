@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Moggybook Registration</title>
+        <link rel="stylesheet" type="text/css" href="style.css"> 
+        <script>
+        function testResults(form) {
+            //simple scritp to pop-up form values after submission
+            //grab form element values and store as variables
+            var username = form.username.value;
+            //repeat above for all the form elements used
+            var breed = form.breed.value;
+            var email = form.email.value;
+            var homepage = form.homepage.value;
+            var dateOfBirth = form.date_of_birth.value;
+            var about = form.about.value;
+
+            //complete alert message popup be appending variables
+            alert ("You registered: " + username + "\nBreed: " + breed + "\nEmail: " + email + "\nHomepage: " + homepage + "\nDate of Birth: " + dateOfBirth + "\nAbout: " + about);
+        }
+        </script>
+    </head>
+    <body>
+        <h1>Moggybook!</h1>
+        <!--complete the form-->
+
+        <form>
+            <table border="0" cellspacing="5" cellpadding="5">
+                <tr>
+                    <td>Username:</td>
+                    <td>
+                        <input type="textarea" name="username" required>
+                    </td>
+                </tr>
+                <!--use table row <tr> template beaneath for other form elements -->
+                <tr>
+                    <td>Breed:</td>
+                    <td>
+                        <input type="text" name="breed" required>
+                    </td>                    
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td>
+                        <input type="email" name="email" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Homepage:</td>
+                    <td>
+                        <input type="url" name="homepage">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date of Birth:</td>
+                    <td>
+                        <input type="date" name="date_of_birth" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>About:</td>
+                    <td>
+                        <textarea name="about" rows="4" cols="50" required></textarea>
+                    </td>
+                </tr>  
+            </table>
+            <input type="submit" name="submit" value="Submit" onClick="testResults(this.form)" />
+        </form>
+    </body>
+</html>
