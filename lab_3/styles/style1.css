@@ -1,0 +1,106 @@
+body {
+    margin: auto;
+    width: 100%;
+}
+header, section, article, nav, aside, footer, div {
+    font-family: sans-serif;
+    border: 1px dotted #000;
+    padding: 10px;
+    margin: 10px;
+}
+#PageContent {
+    
+    border-style: dashed;
+    border-color: rgb(6, 6, 6);
+    overflow: hidden;
+}
+#SiteNavigation ul {
+    list-style-type: none;
+    margin: 0;
+}
+#SiteNavigation li {
+    display: inline-block;
+    margin-right: 10px;
+}
+#SiteNavigation a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+#SiteNavigation a:hover {
+    background-color: #e0e0e0;
+    border-color: #999;
+}
+#PageHeader {
+    overflow: hidden;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+#SiteLogo {
+    width: 20%;
+    float: left;
+    margin: 15px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+#SiteTitle {
+    float: right;
+    display: inline-block;
+    width: 70%;
+    margin: 15px;
+    padding: 55px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+#PageContent, #SiteNavigation, #ImageDetails {
+    clear: both;
+}
+#main-image {
+    width: 70%;
+    float: left;
+}
+#ImageDetails {
+    float: left;
+    width: 48%;
+    padding: 10px;
+    margin: 30px 20px;
+    border: 1px dashed red;
+}
+#PhotoGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 15%;
+    float: right;
+    padding: 0;
+    margin: 5px;
+}
+.photo {
+    width: 13%;
+    margin: 5px;
+    box-sizing: border-box;
+}
+.GalleryPost {
+    clear: right;
+    float: right;
+    width: 12%;
+    margin: 5px;
+}
+.GalleryPost div {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 70%;
+    font-size: xx-small;
+    margin: 5px;
+}
+#PageFooter {
+    clear: both;
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+}
