@@ -41,7 +41,7 @@ app.get('/calc', function(req, res){
             return res.send("Error: Invalid operator. Use add, sub, mul, or div.");
     }
 
-    res.send(result);
+    res.send("Result:" + result);
 });
 
 app.listen(8080);
