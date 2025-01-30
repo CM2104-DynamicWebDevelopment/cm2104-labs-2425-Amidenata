@@ -1,7 +1,9 @@
 var express =  require('express');
 var app = express();
 var knockknock = require('knock-knock-jokes');
-app.use(express.static('public'))
+app.use(express.static('public'));
+app.use(express.urlencoded({extended:true}));
+
 
 app.get('/', function(req, res){
     res.send("Hello world! by express");
@@ -63,6 +65,5 @@ app.post('/postform', function(req, res){
     res.send("Hi "+name+" I am sure you will "+quest) ;
 });
 
-app.use(express.urlencoded({extended:true}))
 
 app.listen(8080);
