@@ -12,6 +12,25 @@ var spotifyApi = new SpotifyWebApi({
     clientSecret: '6a03278a9df94716bce210b8446f8d15'
 });
 
+app.get('/form', function(req, res){
+    res.send('<!DOCTYPE html>\n' +
+        '<html>\n' +
+        '<head>\n' +
+        '    <title>Form</title>\n' +
+        '</head>\n' +
+        '<body>\n' +
+        '<h1>Express Static Form</h1>\n' +
+        '<form action="/search">\n' +
+        '    Name:<br>\n' +
+        '    <input type="text" name="artist" value=""/><br>\n' +
+        '    What track are you looking for:<br>\n' +
+        '    <input type="text" name="searchterm" value=""/><br><br>\n' +
+        '    <input type="submit" value="Submit"/>\n' +
+        '</form>\n' +
+        '</body>\n' +
+        '</html>');
+});
+
 spotifyApi.clientCredentialsGrant().then(
     function (data) {
         console.log('The access token expires in ' + data.body['expires_in']);
