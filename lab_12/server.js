@@ -12,7 +12,7 @@ var spotifyApi = new SpotifyWebApi({
     clientSecret: '6a03278a9df94716bce210b8446f8d15'
 });
 
-spotifyApi.clientCredentialsGrant().them(
+spotifyApi.clientCredentialsGrant().then(
     function (data) {
         console.log('The access token expires in ' + data.body['expires_in']);
         console.log('The access token is ' + data.body['access_token']);
