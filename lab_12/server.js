@@ -12,6 +12,8 @@ var spotifyApi = new SpotifyWebApi({
     clientSecret: '6a03278a9df94716bce210b8446f8d15'
 });
 
+
+
 spotifyApi.clientCredentialsGrant().then(
     function (data) {
         console.log('The access token expires in ' + data.body['expires_in']);
@@ -52,7 +54,7 @@ async function getTracks(searchterm, res) {
         });
 }
 
-app.post('/search', function (req, res) {
+app.get('/search', function (req, res) {
     var searchterm = req.query.searchterm;
     getTracks(searchterm, res);
 });
@@ -61,14 +63,6 @@ app.get('/searchLove', function (req, res) {
     getTracks('love', res);
 });
 
-async function getTopTracks(artist, res) {
-    spotifyApi.getArtistTopTracks(artist,
-        'GB')
-        .then(function (data) {
-            console.log(data.body);
-        }, function (err) {
-            console.log('Something went wrong!', err);
-        });
-}
+
 
 app.listen(8080);
