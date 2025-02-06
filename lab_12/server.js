@@ -63,6 +63,14 @@ app.get('/searchLove', function (req, res) {
     getTracks('love', res);
 });
 
-
+async function getTopTracks(artist, res) {
+    spotifyApi.getArtistTopTracks(artist,
+        'GB')
+        .then(function (data) {
+            console.log(data.body);
+        }, function (err) {
+            console.log('Something went wrong!', err);
+        });
+}
 
 app.listen(8080);
