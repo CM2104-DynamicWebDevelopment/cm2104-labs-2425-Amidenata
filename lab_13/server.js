@@ -3,9 +3,6 @@ const url = 'mongodb://127.0.0.1:27017';
 const client = new MongoClient(url);
 const dbname = 'star_wars_quotes';
 
-var express =  require('express');
-var app = express();
-app.use(express.urlencoded({extended:true}));
 
 //Code to link to the express module
 const express = require('express');
@@ -13,6 +10,7 @@ const app = express();
 
 //Code to define the public
 app.use(express.static('public'))
+app.use(express.urlencoded({extended:true}))
 
 var db;
 
