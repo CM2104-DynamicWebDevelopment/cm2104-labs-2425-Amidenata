@@ -3,6 +3,8 @@ const url = 'mongodb://127.0.0.1:27017';
 const client = new MongoClient(url);
 const dbname = 'star_wars_quotes';
 
+app.use(express.urlencoded({extended:true}));
+
 //Code to link to the express module
 const express = require('express');
 const app = express();
@@ -40,3 +42,11 @@ app.get('/all', function(req, res) {
         res.send(output);
     });
 });
+
+app.post('/quotes', function(req, res){
+    db.collection('quotes').insertOne(req.body, function(err, result) {
+        if (err) throw err;
+        console.log('saved to database')
+        res.redirect('/')
+    })
+})
