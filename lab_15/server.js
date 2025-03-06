@@ -184,7 +184,8 @@ var datatostore = {
 "login":{"username":req.body.username,"password":req.body.password},
 "dob":req.body.dob,"registered":Date(),
 "picture":{"large":req.body.large,"medium":req.body.medium,"thumbnail":req.body.thumbnail},
-"nat":req.body.nat}
+  "image":{"large":req.body.large,"small":req.body.medium,"thumbnail":req.body.thumbnail},
+  "nat":req.body.nat}
 
 
 //once created we just run the data string against the database and all our new data will be saved/
