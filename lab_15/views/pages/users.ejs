@@ -14,7 +14,10 @@
   <main>
     <div class="jumbotron">
         <!--welcome the user-->
-        <h2>Welcome <%= result.login.username %></h2>
+        <% if (loggedInUser) { %>
+        <h3>Welcome, <%= loggedInUser.name.first + " " + loggedInUser.name.last %>!</h3>
+        <% } %>
+
       <!--page to display all the users-->
       <h2>All Students</h2>
 
