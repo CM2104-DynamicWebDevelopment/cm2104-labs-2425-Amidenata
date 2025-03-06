@@ -19,7 +19,7 @@ const bodyParser = require('body-parser'); //npm install body-parser
 const app = express();
 
 
-//this tells express we are using sesssions. These are variables that only belong to one user of the site at a time.
+//this tells express we are using sessions. These are variables that only belong to one user of the site at a time.
 app.use(session({ secret: 'example' }));
 
 //code to define the public "static" folder
