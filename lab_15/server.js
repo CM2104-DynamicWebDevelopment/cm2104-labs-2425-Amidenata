@@ -184,7 +184,6 @@ var datatostore = {
 "login":{"username":req.body.username,"password":req.body.password},
 "dob":req.body.dob,"registered":Date(),
 "picture":{"large":req.body.large,"medium":req.body.medium,"thumbnail":req.body.thumbnail},
-  "image":{"large":req.body.large,"small":req.body.medium,"thumbnail":req.body.thumbnail},
   "nat":req.body.nat}
 
 
