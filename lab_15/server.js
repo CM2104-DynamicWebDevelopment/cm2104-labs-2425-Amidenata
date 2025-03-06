@@ -117,7 +117,7 @@ app.get('/logout', function(req, res) {
 
 
 //the dologin route detasl with the data from the login screen.
-//the post variables, username and password ceom from the form on the login page.
+//the post variables, username and password come from the form on the login page.
 app.post('/dologin', function(req, res) {
   console.log(JSON.stringify(req.body))
   var uname = req.body.username;
@@ -148,7 +148,7 @@ app.post('/delete', function(req, res) {
   //if so get the username variable
   var uname = req.body.username;
 
-  //check for the username added in the form, if one exists then you can delete that doccument
+  //check for the username added in the form, if one exists then you can delete that document
   db.collection('people').deleteOne({"login.username":uname}, function(err, result) {
     if (err) throw err;
     //when complete redirect to the index
