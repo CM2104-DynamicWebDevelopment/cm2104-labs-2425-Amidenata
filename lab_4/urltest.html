@@ -1,0 +1,26 @@
+!DOCTYPE html>
+<html>
+    <head>
+        <title>test</title>
+        <script>
+        // grab the URL in the location bar
+        var searchString = document.location.search;
+
+        // strip off the leading '?'
+        searchString = searchString.substring(1);
+
+        // split string of arguments into name=value pairs
+        var nvPairs = searchString.split("&")
+
+        // iterate though name=value pairs
+        // split into seperate name and value
+        // print to the browser console
+        for (i = 0; i < nvPairs.length; i++) {
+            var nvPairs = nvPairs[i].split("=");
+            var name = nvPairs[0];
+            var value = nvPairs[1];
+              console.log("argumet name="+name+" and value="+value)
+        }
+        </script>
+    </head>
+</html>
